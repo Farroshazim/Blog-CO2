@@ -1,26 +1,82 @@
 <!DOCTYPE html>
-<html lang="id" class="no-js">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="widht-device-widht, initial-scale=1">
+	<meta charset="utf-8">
+	<title>header</title>
+	<style>
+	* {box-sizing: border-box;}
+	body { 
+		margin: 0;
+		font-family: Roboto, sans-serif;
+		background-color: #FFC731;
+	}
+	@media screen and (max-width: 500px) {
+  		.header-left {
+  			display: none;
+  		}
+	}
+	/*Header*/
+	.header {
+		background-color: #474443;
+		height: 120px;
+		padding: 20px ;
+		align-items: center;
+		display: flex;
+		justify-content: space-between;
+	}
+	.header a {
+		color: #FFFFFF;
+		text-align: right;
+		align-items: center;
+		padding: 12px;
+		text-decoration: none;
+		font-size: 16px; 
+		font-style: normal;
+		font-weight: 900;
+		font-family: Roboto, sans-serif;
+		line-height: 18.75px;
+		display: inline;
+	}
+	.header img {
+		width: 241px;
+		height: 80px;
+		margin-left: 58px;
+		vertical-align: middle;
+	}
+	.header a:hover {
+		border-bottom: 4px solid #FFC731;
+	}
+	.header a.active {
+		border-bottom: 4px solid #FFC731;
+	}
+	.header-right {
+	  float: right;
+	}
 
-    <title><?php bloginfo('name'); ?> | <?php wp_title(); ?> </title>
+	</style>
+<body>
+	<div class="header bg-dark">
+		<div class="header-left">
+		<a href="index.php"><img src="img/logo.png" class="logo"></a>
+		</div>
+		<div class="header-right">
+		    <a class="active" href="#home">PROFILES</a>
+	    	<a href="#contact">NEWS</a>
+	    	<a href="#about">ARTICLES</a>
+	    	<a href="#about">COMMENTS</a>
+  		</div>
+	</div>
+	
+	</body>
+</html>
 
-    <meta name="description" content="<?php bloginfo('description'); ?>">
-    <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>?v=xze">
-    <link rel="profile" href="http://pmpg.org/xfn/11">
-    <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
-    <?php wp_head();?>
-</head>
-<body <?php body_class(); ?>>
-    <div class="header">
-        <div class="logo" >
-            <a href="<?php echo home_url(); ?>"><img src="<?php echo get_template_directory_uri(); ?>/image/logo.png" alt="<?php bloginfo('name'); ?> "></a>
-        </div>
-        <div class="header-right">
-            <ul>
-                    <?php wp_nav_menu(array('theme_location' => 'header-menu')); ?>
-            </ul>
-        </div>
-    </div>
-    
+
+
+
+
+
+
+
+
+
+
