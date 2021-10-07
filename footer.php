@@ -8,7 +8,6 @@
             body { 
                 margin: 0;
                 font-family: Roboto, sans-serif;
-                background-color: #FFC731;
             }
             @media screen and (max-width: 500px) {
                   .header-left {
@@ -77,18 +76,42 @@
     width: 245px;
 	height: 82px;	
 }
+.card {
+        width: 130px;
+        height: 195px;
+        background: url("/examples/images/card-back.jpg") no-repeat;
+        margin: 50px;
+    }
+.card:hover {
+        background: url("/examples/images/card-front.jpg") no-repeat;
+    }
+
 .fb{
     display: inline-block;
     white-space: nowrap;
     width: 51px;
-	height: 58px;	
+	height: 58px;
+    background: url("img/fb.png") no-repeat;
 }
-.link{
+.fb-hover{
+    position: relative;
+    width: 64px;
+	height: 60px;
+    background: url("img/fb-hover.png") no-repeat;
+}
+.link {
     display: inline-block;
     white-space: nowrap;
-    width: 51px;
-	height: 58px;	
-}
+    width: 48px;
+	height: 39px;
+    background: url("img/link.png") no-repeat;
+    }
+.link:hover {
+    position: relative;
+    width: 69px;
+	height: 66px;
+    background: url("img/link-hover.png") no-repeat;
+    }
 .left-footer{
 	margin-top: 20px;
 	margin-left: 50px;
@@ -149,17 +172,18 @@
         </table>
       </div>
       <div class="right-footer">
-	  <table id="sosmed">
-            <tbody>
-              <tr>
-                <th colspan="2"><h3 class="follow">FOLLOW US</h3></th>
-              </tr>
-              <tr>
-			  <td><a href="https://www.facebook.com/codingcollective/" target="_blank"><img src="img/fb.png" class="fb"></a></td>
-			  <td><a href="https://www.linkedin.com/company/codingcollective/" target="_blank"> <img src="img/link.png" class="link"></a></td>
-              </tr>
-            </tbody>
-        </table>
+    <table id="sosmed">
+        <tbody>
+          <tr>
+            <th colspan="2"><h3 class="follow">FOLLOW US</h3></th>
+          </tr>
+          <tr>
+          <td><a class="fb" href="https://www.facebook.com/codingcollective/" target="_blank"></a>            
+          </td>
+          <td><a class="link" href="https://www.linkedin.com/company/codingcollective/" target="_blank"></a></td>
+          </tr>
+        </tbody>
+    </table>
 
         </div>
     </div>
